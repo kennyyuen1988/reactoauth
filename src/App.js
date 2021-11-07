@@ -52,6 +52,7 @@ function App() {
     console.log(filename);
     Storage.put(filename, ref.current.files[0]).then(resp => {
       console.log(resp);
+      console.log(user.email,'uploaded', filename, 'successful!');
     }).catch(err => {console.log(err);});
   }
 
@@ -60,7 +61,7 @@ function App() {
       <>
         <p>{ user.username } : { user.email }</p>
         <input ref={ref} type="file" onChange={handleFileLoad} />
-        <button onClick = { logOff} > Log off</button>
+        <button onClick = { logOff} > Log Out</button>
       </>
     )
   } else {
