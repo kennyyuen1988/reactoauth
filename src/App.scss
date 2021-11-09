@@ -12,6 +12,7 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -35,26 +36,31 @@
     transform: rotate(360deg);
   }
 }
-.video-bg {
+
+.video-bg{
   position: fixed;
   top: 0;
   left: 0;
-}
-.video-bg video {
-  width: 100%;
+
+  video{
+    width: 100%;
+  }
 }
 
-.login-form {
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+.login-form{
+  background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
   width: 300px;
   padding: 20px;
   margin: auto;
   margin-top: 10%;
+  
+  button#loginViaGoogle{
+    
+  }
 }
 
-/*# sourceMappingURL=App.css.map */

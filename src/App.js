@@ -67,12 +67,14 @@ function App() {
   } else {
     return (
       <>
-        <div class="video-bg">
-         <video width="auto" height="auto" autoPlay loop muted>
-          <source src="https://assets.codepen.io/3364143/7btrrd.mp4" type="video/mp4" />
-        </video>
+        <div className="video-bg">
+          <video autoPlay loop muted>
+            <source src="https://assets.codepen.io/3364143/7btrrd.mp4" type="video/mp4" />
+          </video>
         </div>
-        <button onClick={() => Auth.federatedSignIn( {provider: "Google"})}>Login via Google</button>
+        <div className="login-form">
+          <button id="loginViaGoogle" onClick={() => Auth.federatedSignIn( {provider: "Google"})}>Login via Google</button>
+        </div>
       </>
     );
   } 
