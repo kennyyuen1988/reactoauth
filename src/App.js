@@ -66,7 +66,14 @@ function App() {
     )
   } else {
     return (
-      <button onClick={() => Auth.federatedSignIn( {provider: "Google"})}>Login via Google</button>
+      <>
+        <div class="video-bg">
+         <video width="auto" height="auto" autoPlay loop muted>
+          <source src="https://assets.codepen.io/3364143/7btrrd.mp4" type="video/mp4" />
+        </video>
+        </div>
+        <button onClick={() => Auth.federatedSignIn( {provider: "Google"})}>Login via Google</button>
+      </>
     );
   } 
 }
