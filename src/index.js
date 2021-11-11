@@ -11,6 +11,12 @@ Amplify.configure(config);
 
 ReactDOM.render(
   <React.StrictMode>
+
+    <div className="video-bg">
+      <video autoPlay loop muted>
+        <source src="https://assets.codepen.io/3364143/7btrrd.mp4" type="video/mp4" />
+      </video>
+    </div>
     <App />
   </React.StrictMode>,
   document.getElementById('root')
