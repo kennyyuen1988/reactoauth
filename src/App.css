@@ -81,6 +81,7 @@ html {
 body {
   font-family: var(--body-font);
   background-image: url(https://wallpapershome.com/images/wallpapers/macos-big-sur-1280x720-dark-wwdc-2020-22655.jpg);
+  background-color: #000;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -122,7 +123,7 @@ body {
   border: 0;
   cursor: pointer;
   width: 200px;
-  margin-left: 90px;
+  margin-left: 83px;
 }
 
 .header {
@@ -144,7 +145,9 @@ body {
   display: flex;
   align-items: center;
 }
-.header-menu a {
+.header-menu button {
+  background: transparent;
+  border: 0;
   padding: 20px 30px;
   text-decoration: none;
   color: var(--inactive-color);
@@ -152,11 +155,11 @@ body {
   transition: 0.3s;
 }
 @media screen and (max-width: 610px) {
-  .header-menu a:not(.main-header-link) {
+  .header-menu button:not(.main-header-link) {
     display: none;
   }
 }
-.header-menu a.is-active, .header-menu a:hover {
+.header-menu button.is-active, .header-menu button:hover {
   color: var(--theme-color);
   border-bottom: 2px solid var(--theme-color);
 }
@@ -267,7 +270,40 @@ body {
   }
 }
 
-.profile-img {
+.dropdown.is-active ul {
+  opacity: 1;
+  pointer-events: all;
+  transform: translatey(25px);
+}
+.dropdown.is-active ul li:hover {
+  background-color: var(--dropdown-hover);
+}
+
+div.dropdown {
+  position: relative;
+  display: flex;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+div.dropdown ul {
+  position: absolute;
+  background: var(--dropdown-bg);
+  height: 110px;
+  width: 120px;
+  right: 0;
+  top: 20px;
+  pointer-events: none;
+  opacity: 0;
+  transform: translatey(10px);
+  transition: all 0.4s ease;
+}
+div.dropdown ul li a {
+  text-decoration: none;
+  color: var(--theme-color);
+  font-size: 12px;
+}
+div.dropdown .profile-img {
   width: 32px;
   height: 32px;
   border-radius: 50%;
