@@ -8,11 +8,11 @@ import Amplify from 'aws-amplify';
 import config from './aws-exports';
 Amplify.configure(config);
 
-class test extends React.Component {
-  render() {
-    return (null);
-  }
-}
+// class test extends React.Component {
+//   render() {
+//     return (null);
+//   }
+// }
 
 ReactDOM.render(
   <React.StrictMode>

@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
 import Amplify from '@aws-amplify/core';
 import { Auth, Storage } from 'aws-amplify';
+//import upload from './component/upload';
+import avatar from './asset/default_avatar.jpg';
 import './App.css';
 
 
@@ -59,27 +61,22 @@ function App() {
           <div className="menu-circle"></div>
           <div className="header-menu">
             <button href="#" className="menu-link is-active">Upload Files</button>
-            <button href="#" className="menu-link notify">Your History</button>
-            <button href="#" className="menu-link">Remarks</button>
+            {/*<button href="#" className="menu-link notify">Your History</button>
+            <button href="#" className="menu-link">Remarks</button>*/}
           </div>
-          <div className="search-bar">
+          {/*<div className="search-bar">
             <input type="text" placeholder="Search" />
-          </div>
+          </div>*/}
           <div className="header-profile">
             <h6>Welcome! { user.email }</h6>
             <div className="dropdown profilePic">
-              <ul>
-                <li><a href="#">My Profile</a></li>
-                <li><a href="#">Setting</a></li>
-                <li><a href="#">Logout</a></li>
-              </ul>
-              <img className="profile-img" src="https://images.unsplash.com/photo-1600353068440-6361ef3a86e8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="" />
+              <img className="profile-img" src={avatar} alt="" />
             </div>
           </div>
         </div>
-        <p>Please upload your video:</p>
-        <input ref={ref} type="file" onChange={handleFileLoad} />
-        <button onClick = { logOff} > Log Out</button>
+        <div className="desc2">Please upload your video:</div>
+        <input className="uploadBtn" ref={ref} type="file" onChange={handleFileLoad} />
+        <button className="logOut" onClick = { logOff} > Log Out</button>
       </div>
     );
   } else {

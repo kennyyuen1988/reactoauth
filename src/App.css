@@ -102,7 +102,6 @@ body {
   background-color: var(--theme-bg-color);
   max-width: 1250px;
   max-height: 860px;
-  height: 90vh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -124,6 +123,33 @@ body {
   cursor: pointer;
   width: 200px;
   margin-left: 83px;
+}
+.app div.desc2 {
+  color: #999ba5;
+  margin: 32px 40px;
+  font-size: 16px;
+}
+.app .uploadBtn {
+  background: transparent;
+  border: dashed 2px #fff;
+  width: auto;
+  margin: 0 40px;
+  padding: 16px;
+  color: #fff;
+}
+.app .logOut {
+  width: 300px;
+  margin: auto;
+  background: transparent;
+  border: 1px solid var(--button-inactive);
+  border-radius: 20px;
+  color: rgba(249, 250, 251, 0.55);
+  padding: 8px;
+  margin: 32px auto;
+  cursor: pointer;
+}
+.app .logOut:hover {
+  color: #f9fafb;
 }
 
 .header {
@@ -153,6 +179,7 @@ body {
   color: var(--inactive-color);
   border-bottom: 2px solid transparent;
   transition: 0.3s;
+  font-size: 16px;
 }
 @media screen and (max-width: 610px) {
   .header-menu button:not(.main-header-link) {
@@ -310,6 +337,9 @@ div.dropdown .profile-img {
   object-fit: cover;
   border: 2px solid var(--theme-color);
   margin-left: 22px;
+  position: relative;
+  left: 0;
+  top: 0;
 }
 
 .login-form {
